@@ -60,3 +60,32 @@ header {
   width: 100%;
   transition: width 700ms ease-in-out;
 }
+
+/* CARD */
+
+.card {
+  background: #fff;
+  width: 800px;
+  height: 400px;
+
+  margin: 45px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
+
+  opacity: 0;
+  animation-name: up;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes up {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
