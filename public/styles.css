@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #7159c1;
+  --secondary-color: #f7df1e;
 }
 
 * {
@@ -66,7 +67,7 @@ header {
 .card {
   background: #fff;
   width: 800px;
-  height: 400px;
+  min-height: 400px;
 
   margin: 45px auto;
 
@@ -88,4 +89,82 @@ header {
   to {
     opacity: 1;
   }
+}
+
+/* DETALHES */
+
+.details {
+  padding: 32px;
+}
+
+.details .item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.details .item:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777777;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+  color: #555555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.details h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.details .item span {
+  padding: 8px 16px;
+  background: var(--secondary-color);
+  border-radius: 16px;
+  color: #777;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* FORM */
+input {
+  width: 100%;
+  outline: none;
+  color: #555555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+input[type="radio"]{
+  width: initial;
+  margin-right: 4px;
+}
+
+input::placeholder{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button[type="submit"]{
+  padding: 8px 32px;
+  background: var(--primary-color);
+  border-radius: 4px;
+  margin-top: 16px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
 }

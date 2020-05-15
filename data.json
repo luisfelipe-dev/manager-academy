@@ -1,0 +1,12 @@
+{
+  "instructors": [
+    {
+      "avatar_url": "https://Google.com",
+      "name": "petz-vue",
+      "birth": 1589500800000,
+      "gender": "M",
+      "services": "Musculação",
+      "created_at": 1589516618555
+    }
+  ]
+}
