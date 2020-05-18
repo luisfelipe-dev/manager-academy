@@ -2,11 +2,30 @@
   "instructors": [
     {
       "avatar_url": "https://Google.com",
+      "birth": 1589760000000,
+      "created_at": 1589840427949,
+      "id": 1,
       "name": "petz-vue",
-      "birth": 1589500800000,
-      "gender": "M",
       "services": "Musculação",
-      "created_at": 1589516618555
+      "gender": "F"
+    },
+    {
+      "avatar_url": "http://www.petz.com.br",
+      "birth": 707184000000,
+      "created_at": 1589841721079,
+      "id": 2,
+      "name": "Luís Felipe",
+      "services": "Musculaç~",
+      "gender": "M"
+    },
+    {
+      "avatar_url": "http://www.petz.com.br",
+      "birth": 707184000000,
+      "created_at": 1589841740821,
+      "id": 3,
+      "name": "Luís Felipe",
+      "services": "Musculação, Crossfit",
+      "gender": "M"
     }
   ]
 }

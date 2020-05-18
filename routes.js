@@ -16,6 +16,8 @@ routes.get("/instructors/create", (request, response) => {
   return response.render("instructors/create");
 });
 
+routes.get("/instructors/:id", instructors.show);
+
 routes.post("/instructors", instructors.post);
 
 routes.get("/members", (request, response) => {
