@@ -1,7 +1,8 @@
 const fs = require("fs");
 const data = require("./data.json");
+const { age , date } = require("./ultis");
 
-// GET
+// SHOW
 exports.show = (request, response) => {
   const { id } = request.params;
 
@@ -13,9 +14,11 @@ exports.show = (request, response) => {
 
   const instructor = {
     ...foundInstructor,
-    age: "",
+    age: age(foundInstructor.birth),
     services: foundInstructor.services.split(","),
-    created_at: "",
+    created_at: new Intl.DateTimeFormat("pt-br").format(
+      foundInstructor.created_at
+    ),
   };
 
   return response.render("instructors/show", { instructor });
@@ -59,6 +62,23 @@ exports.post = (request, response) => {
 
     return response.redirect("/instructors");
   });
+};
 
-  // return response.send(request.body);
+// EDIT
+exports.edit = function (request, response) {
+  const { id } = request.params;
+
+  const foundInstructor = data.instructors.find(function (instructor) {
+    return instructor.id == id;
+  });
+
+  if (!foundInstructor) return response.send("Instrutor não encontrado.");
+
+  const instructor = {
+    ...foundInstructor,
+    birth: date(foundInstructor.birth)
+  }
+
+
+  return response.render("instructors/edit", { instructor });
 };
