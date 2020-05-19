@@ -1,15 +1,6 @@
 {
   "instructors": [
     {
-      "avatar_url": "https://Google.com",
-      "birth": 1589760000000,
-      "created_at": 1589840427949,
-      "id": 1,
-      "name": "petz-vue",
-      "services": "Musculação",
-      "gender": "F"
-    },
-    {
       "avatar_url": "http://www.petz.com.br",
       "birth": 707184000000,
       "created_at": 1589841721079,
@@ -40,8 +31,8 @@
       "avatar_url": "https://source.unsplash.com/collection/8353395/900x900",
       "birth": 707184000000,
       "created_at": 1589856349267,
-      "id": 5,
-      "name": "Luís Felipe",
+      "id": "5",
+      "name": "Luís Felipeo",
       "services": "ta FODA",
       "gender": "F"
     }
