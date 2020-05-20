@@ -2,6 +2,12 @@ const fs = require("fs");
 const data = require("./data.json");
 const { age, date } = require("./ultis");
 
+exports.index = (request, response) => {
+  return response.render("instructors/index", {
+    instructors: data.instructors,
+  });
+};
+
 // SHOW
 exports.show = (request, response) => {
   const { id } = request.params;
@@ -104,6 +110,7 @@ exports.put = function (request, response) {
     ...foundInstructor,
     ...request.body,
     birth: Date.parse(request.body.birth),
+    id: Number(request.body.id),
   };
 
   data.instructors[index] = instructor;
